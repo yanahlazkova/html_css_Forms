@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+ul {
+    padding: 0;
+    display: inline-flex;
+
+}
+li {
+    margin-right: 10px;
+    list-style: none;   
+}
+
+button, #submit {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+}
+
+#submit {
+    background-color: #3c8b3f;
+    border: none;
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+form > div {
+    background-color: antiquewhite;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+
+/* .field {
+    display: flex;
+    grid-column: span 2;
+    flex-direction: row;
+} */
+
+
+/* усі бордери закруглені */
+input, select, textarea {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    /* width: 100%; */
+}

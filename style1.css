@@ -7,12 +7,6 @@ body {
 
 .grid-form {
     display: grid;
-    grid-template-areas: 
-    "header header"
-    "menu menu"
-    "about_doc_left about_doc_right"
-    "data_doc data_doc"
-    "footer footer";
     grid-template-columns: 1fr 1fr;
     padding: 5px;
 }
@@ -26,20 +20,23 @@ h1 {
 }
 
 .grid-form > div.header {
-    grid-area: header;
+    grid-area: 1 / 1 / span 1 / span 2;
 }
 
 .grid-form > div.menu {
+    grid-area: 1 / 1 / span 1 / span 2;
+
     margin-left: 10px;
-    grid-area: menu;
+    grid-area: span 2;
 }
 
-.grid-form > div.about_doc_left{
-    grid-area: about_doc_left;
+.grid-form > div.about-doc-left{
+    grid-area: 2 / 1 / span 1 / span 2;
 }
 
-.grid-form > div.about_doc_right {
-    grid-area: about_doc_right;
+.grid-form > div.about-doc-right {
+    /* grid-area: about-doc-right; */
+    grid-area: 3 / 2 / 3 / 3;
 }
 
 .menu li {
@@ -47,7 +44,7 @@ h1 {
     display: inline;
 }
 
-button {
+button, input[id="submit"] {
     height: 30px;
     border-width: 1px;
     border-radius: 5px;
@@ -58,21 +55,40 @@ button:hover {
     background-color: rgb(56, 240, 178);
 }
 
-#save {
+#submit {
     background-color:  rgb(207, 236, 226);
     font-weight: bold;
 }
 
-#save:hover {
+#submit:hover {
     background-color:rgb(123, 202, 176);
 }
 
-.about_doc > div{
+
+.about-doc > div{
     margin: 10px;
+}
+
+label {
+    font-size: small;
 }
 
 input {
     width: auto;
     margin: 10px;
     height: 15px;
+    border-width: 1px;
+    border-color: lightgray;
+    border-radius: 5px;
+}
+
+.left-about-doc {
+    float: left;
+    width: 40%;
+    
+}
+
+.right-about-doc {
+    float: right;
+    width: 60%;
 }
